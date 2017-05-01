@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+table, td{
+     border: 1px solid #000000;
+     border-collapse: collapse;
+     background-color: #00FFFF;
+}
+</style>
+    <script>
+        function over(elem){
+            elem.style.backgroundColor="red";
+        }
+        function out(elem){
+            elem.style.backgroundColor="white";
+        }
+
+    function addAll(){
+    i=1;
+    while (i<5){
+       el=document.getElementById(i);
+       el.addEventListener('mouseover',function(){
+            this.style.backgroundColor="red";
+            //alert(5);
+           });
+       el.addEventListener('mouseout',function(){this.style.backgroundColor="white";});
+       el.addEventListener('click',function(){
+           alert(this.innerHTML);
+       });
+       i=i+1;
+    }
+        }
+    </script>
+</head>
+<body>
+<table>
+<tr>
+    <td id="1" onmouseover="over(this)" onmouseout="out(this)">1</td>
+    <td id="2">2</td>
+</tr>
+<tr>
+    <td id="3">3</td>
+    <td id="4">4</td>
+</tr>
+</table>
+<script>
+ addAll();
+</script>
+</body>
+</html>

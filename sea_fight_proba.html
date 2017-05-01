@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+table, td{
+     border: 1px solid #000000;
+     border-collapse: collapse;
+     background-color: #00FFFF;
+}
+td{
+     width: 20px;
+     height: 20px;
+     text-align: center;
+}
+    </style>
+    <script>
+    function initTable(){
+      for (i=1;i<11;i++)
+        for (j=1;j<11;j++){
+           id=i*100+j;
+            el=document.getElementById(id);
+            el.mode=0;
+            }
+    }
+
+    function addAll(){
+      for (i=1;i<11;i++)
+        for (j=1;j<11;j++){
+           id=i*100+j;
+            el=document.getElementById(id);
+            el.addEventListener('click',function(){
+              if (this.mode==0)
+               {
+               this.style.backgroundColor="red";
+               this.mode=1;
+               }
+              else
+               {
+               this.style.backgroundColor="green";
+               this.mode=0;
+               }
+            });
+          }
+    }
+
+    function setMe(id, color)
+    {
+        document.getElementById(id).style.backgroundColor= color;
+    }
+</script>
+</head>
+<body>
+<table align="center">
+
+<script>
+
+  for(i=0; i<11; i++)
+    {
+	   document.write("<tr>");
+     for (j=0; j<11; j++)
+       {
+	       k=i*100+j;
+         document.write("<td id='"+k+"' width='8' height='8'></td>");
+       }
+	   document.write("</tr>");
+    }
+
+</script>
+
+</table>
+<script>
+initTable();
+addAll();
+</script>
+</body>
+</html>

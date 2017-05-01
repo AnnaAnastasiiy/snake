@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <style>
+table, td{
+  border: 1px solid #FFFFFF;
+  border-collapse: collapse;
+  background-color: #000000;
+}
+
+    </style>
+    <script>
+ g_i=0;
+ g_j=0;
+
+ //L - left
+ //R - right
+ //U - up
+ //D - down
+
+ snake=["L","L","L","U"];
+
+
+ direction = "R";
+ N=30;
+
+function nextStep()
+    {
+    for (i=0; i<snake.length-1; i++)
+        {
+            snake[i]=snake{i+1];
+        }
+    }
+
+ function show()
+ {
+  i_old=g_i;
+  j_old=g_j;
+  id_old=j_old*100+i_old;
+
+  if (direction == "R")
+  {
+    if (g_i == N-1)
+      g_i=0;
+    else
+      g_i++;
+  }
+
+  if (direction == "L")
+  {
+    if (g_i == 0)
+        g_i=N-1;
+    else
+        g_i--;
+  }
+
+  if (direction == "D")
+  {
+    if (g_j == N-1)
+      g_j=0;
+    else
+      g_j++;
+  }
+
+  if (direction == "U")
+  {
+    if (g_j == 0)
+        g_j=N-1;
+    else
+        g_j--;
+  }
+  id_new=g_j*100+g_i;
+
+  document.getElementById(id_old).style.backgroundColor="black";
+  document.getElementById(id_new).style.backgroundColor="green";
+
+  setTimeout(show, 300);
+ }
+
+ function show_old()
+  {
+	    id1=g_i*100+g_j;
+	    id2=g_i*100+(g_j+1);
+
+     document.getElementById(id2).style.backgroundColor="green";
+     document.getElementById(id1).style.backgroundColor="black";
+
+     if (g_j>27)
+				 g_j=0
+			else
+				g_j++;
+
+    setTimeout(show, 500);
+  }
+  function init()
+  {
+    window.addEventListener("keydown", function (event){
+    if ((event.keyCode == 38) || (event.keyCode == 39)
+     || (event.keyCode == 40)||(event.keyCode == 37))
+        {
+         if (event.keyCode == 38) direction='U';
+         if (event.keyCode == 39) direction='R';
+         if (event.keyCode == 40) direction='D';
+         if (event.keyCode == 37) direction='L';
+
+        }
+    },true);
+  }
+
+    </script>
+
+</head>
+<body>
+<h1>Snake</h1>
+
+<table>
+
+    <script>
+
+  for(i=0; i<N; i++)
+    {
+	 document.write("<tr>");
+     for (j=0; j<N; j++)
+       {
+	     k=i*100+j;
+         document.write("<td id='"+k+"' width='8' height='8'></td>"); //<td id='101' width='8' height='8'></td>
+       }
+	 document.write("</tr>");
+    }
+
+//  element = document.getElementById("101").style.backgroundColor="green";
+
+init();
+
+    </script>
+
+</table>
+
+<script>
+  setTimeout(show, 500);
+  //alert("1");
+  //i=0;
+  //for(j=0; j<N-1; j++)
+  //{
+	 //   id1=i*100+j;
+	  //  id2=i*100+(j+1);
+
+  //   document.getElementById(id2).style.backgroundColor="green";
+   //  document.getElementById(id1).style.backgroundColor="black";
+     //alert("Next step");
+
+  //}
+
+</script>
+<!--<img src='img/apple.gif' alt="" height="15" width="15"/>
+-->
+</body>
+</html>

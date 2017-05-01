@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+table, td{
+     border: 1px solid #000000;
+     border-collapse: collapse;
+     background-color: #00FFFF;
+}
+td{
+     width: 20px;
+     height: 20px;
+     text-align: center;
+}
+    </style>
+    <script>
+    function initTable(){
+      for (i=1;i<11;i++)
+        for (j=1;j<11;j++){
+           id=i*100+j;
+            el=document.getElementById(id);
+            el.mode=0;
+            }
+    }
+
+    function addAll(){
+      for (i=1;i<11;i++)
+        for (j=1;j<11;j++){
+           id=i*100+j;
+            el=document.getElementById(id);
+            el.addEventListener('click',function(){
+              if (this.mode==0)
+               {
+               this.style.backgroundColor="red";
+               this.mode=1;
+               }
+              else
+               {
+               this.style.backgroundColor="green";
+               this.mode=0;
+               }
+            });
+          }
+    }
+
+    function setMe(id, color)
+    {
+        document.getElementById(id).style.backgroundColor= color;
+    }
+</script>
+</head>
+<body>
+<table align="center">
+    <tr id="o">
+        <td id="000"onclick = "setMe('000', '#FFFFFF')"></td>
+        <td id="001"onclick = "setMe('001', '#00CCFF')">Р</td>
+        <td id="002"onclick = "setMe('002', '#00CCFF')">Е</td>
+        <td id="003"onclick = "setMe('003', '#00CCFF')">С</td>
+        <td id="004"onclick = "setMe('004', '#00CCFF')">П</td>
+        <td id="005"onclick = "setMe('005', '#00CCFF')">У</td>
+        <td id="006"onclick = "setMe('006', '#00CCFF')">Б</td>
+        <td id="007"onclick = "setMe('007', '#00CCFF')">Л</td>
+        <td id="008"onclick = "setMe('008', '#00CCFF')">І</td>
+        <td id="009"onclick = "setMe('009', '#00CCFF')">К</td>
+        <td id="010"onclick = "setMe('010', '#00CCFF')">А</td>
+
+    </tr>
+    <tr>
+        <td id="100"onclick = "setMe('100', '#00CCFF')">0</td>
+        <td id="101"><img src='img/apple.gif' alt="" height="15" width="15"/></td></td>
+        <td id="102"></td>
+        <td id="103"></td>
+        <td id="104"></td>
+        <td id="105"></td>
+        <td id="106"></td>
+        <td id="107"></td>
+        <td id="108"></td>
+        <td id="109"></td>
+        <td id="110"></td>
+    </tr>
+    <tr>
+        <td id="200"onclick = "setMe('200', '#00CCFF')">1</td>
+        <td id="201"></td>
+        <td id="202"></td>
+        <td id="203"></td>
+        <td id="204"></td>
+        <td id="205"></td>
+        <td id="206"></td>
+        <td id="207"></td>
+        <td id="208"></td>
+        <td id="209"></td>
+        <td id="210"></td>
+    </tr>
+    <tr>
+        <td id="300"onclick = "setMe('300', '#00CCFF')">2</td>
+        <td id="301"></td>
+        <td id="302"></td>
+        <td id="303"></td>
+        <td id="304"></td>
+        <td id="305"></td>
+        <td id="306"></td>
+        <td id="307"></td>
+        <td id="308"></td>
+        <td id="309"></td>
+        <td id="310"></td>
+    <tr>
+        <td id="400"onclick = "setMe('400', '#00CCFF')">3</td>
+        <td id="401"></td>
+        <td id="402"></td>
+        <td id="403"></td>
+        <td id="404"></td>
+        <td id="405"></td>
+        <td id="406"></td>
+        <td id="407"></td>
+        <td id="408"></td>
+        <td id="409"></td>
+        <td id="410"></td>
+    </tr>
+    <tr>
+        <td id="500"onclick = "setMe('500', '#00CCFF')">4</td>
+        <td id="501"></td>
+        <td id="502"></td>
+        <td id="503"></td>
+        <td id="504"></td>
+        <td id="505"></td>
+        <td id="506"></td>
+        <td id="507"></td>
+        <td id="508"></td>
+        <td id="509"></td>
+        <td id="510"></td>
+    </tr>
+    <tr>
+        <td id="600"onclick = "setMe('600', '#00CCFF')">5</td>
+        <td id="601"></td>
+        <td id="602"></td>
+        <td id="603"></td>
+        <td id="604"></td>
+        <td id="605"></td>
+        <td id="606"></td>
+        <td id="607"></td>
+        <td id="608"></td>
+        <td id="609"></td>
+        <td id="610"></td>
+    </tr>
+    <tr>
+        <td id="700"onclick = "setMe('700', '#00CCFF')">6</td>
+        <td id="701"></td>
+        <td id="702"></td>
+        <td id="703"></td>
+        <td id="704"></td>
+        <td id="705"></td>
+        <td id="706"></td>
+        <td id="707"></td>
+        <td id="708"></td>
+        <td id="709"></td>
+        <td id="710"></td>
+    </tr>
+    <tr>
+        <td id="800"onclick = "setMe('800', '#00CCFF')">7</td>
+        <td id="801"></td>
+        <td id="802"></td>
+        <td id="803"></td>
+        <td id="804"></td>
+        <td id="805"></td>
+        <td id="806"></td>
+        <td id="807"></td>
+        <td id="808"></td>
+        <td id="809"></td>
+        <td id="810"></td>
+    </tr>
+    <tr>
+        <td id="900"onclick = "setMe('900', '#00CCFF')">8</td>
+        <td id="901"></td>
+        <td id="902"></td>
+        <td id="903"></td>
+        <td id="904"></td>
+        <td id="905"></td>
+        <td id="906"></td>
+        <td id="907"></td>
+        <td id="908"></td>
+        <td id="909"></td>
+        <td id="910"></td>
+    </tr>
+    <tr>
+        <td id="1000"onclick = "setMe('1000', '#00CCFF')">9</td>
+        <td id="1001"></td>
+        <td id="1002"></td>
+        <td id="1003"></td>
+        <td id="1004"></td>
+        <td id="1005"></td>
+        <td id="1006"></td>
+        <td id="1007"></td>
+        <td id="1008"></td>
+        <td id="1009"></td>
+        <td id="1010"></td>
+    </tr>
+</table>
+
+<script>
+//for (i=1;i<11;i++)
+// for (j=1;j<11;j++)
+//  document.write(i+" "+j+" "+(i*100+j)+", ");
+initTable();
+addAll();
+</script>
+</body>
+</html>
